@@ -12,3 +12,14 @@ class Solution {
         
     }
 }
+//bitmagic
+class Solution {
+    public static boolean isPowerofTwo(long N) {
+        // code here
+        if((N&(N-1))==0)
+        {
+            return true;
+        }
+        return false;
+    }
+}
