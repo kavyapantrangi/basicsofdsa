@@ -23,3 +23,30 @@ class GfG {
     }
 }
 
+
+
+//using recursion
+class GfG {
+    public Stack<Integer> sort(Stack<Integer> s) {
+        
+        if(s.size()<=1)return s;
+        int top=s.pop();
+        sort(s);
+        insertInSort(s,top);
+        return s;
+       
+    }
+    public void insertInSort(Stack<Integer>s,int ele)
+    {
+        if(s.isEmpty()||s.peek()<ele)
+        {
+            s.push(ele);
+            return ;
+            
+        }
+        int top=s.pop();
+        insertInSort(s,ele);
+        s.push(top);
+    }
+}
+
